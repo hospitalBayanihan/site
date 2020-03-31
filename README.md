@@ -11,3 +11,16 @@ Getting Started:
   python manage.py runserver
 7. Go to http://localhost:8000/ using any browser
 
+Adding columns to db:
+1. go to main/models.py
+2. make necessary modifications. Add new database, add new features etc.
+3. go to git root
+4. do 'python manage.py makemigrations" - This will convert the changes in the
+   models.py into SQL commands.
+5. do 'python manage.py manage" - This will execute the SQL command. At this
+   point, you should see the changes in db.sqlite. Try to open the db.sqlite
+   using any sqlite viewer, to investigate.
+6. Modify main/views.py to receive the data from the POST command.
+7. Modify the main/templates/index.html to modify the front end that will
+   serve as the form. Make sure the names matches the declarations in
+   main/views.py
