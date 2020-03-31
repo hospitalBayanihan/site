@@ -20,5 +20,15 @@ def main(request):
         #writes the data to the db.sqlite
         hospitals_inputs.save()
 
-    return render(request, 'main/index.html', {'title': 'Insert Tagline Here'})
+
+    hosp_all_entries = Hospitals.objects.all()
+    print (hosp_all_entries)
+    print (hosp_all_entries[0].hospital_name)
+
+    content = {
+        'title': 'Insert Tagline Here',
+        'hosp_all' : Hospitals.objects.all()
+    }
+
+    return render(request, 'main/index.html', content)
 # Create your views here.
