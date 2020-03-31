@@ -24,3 +24,8 @@ Adding columns to db:
 7. Modify the main/templates/index.html to modify the front end that will
    serve as the form. Make sure the names matches the declarations in
    main/views.py
+
+Herlan Branch notes:
+1. models.py in main was edited to include all columns from airtable
+2. refresch view was added to update database based from airtable data
+
