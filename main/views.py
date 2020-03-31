@@ -8,7 +8,17 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
+from .models import Hospitals
 
 def main(request):
+
+    if request.POST:
+        hospitals_inputs = Hospitals(
+                hospital_name = request.POST['hospital_name'],
+                n95_weekly_volume = request.POST['n95_weekly_volume']
+                )
+        #writes the data to the db.sqlite
+        hospitals_inputs.save()
+
     return render(request, 'main/index.html', {'title': 'Insert Tagline Here'})
 # Create your views here.

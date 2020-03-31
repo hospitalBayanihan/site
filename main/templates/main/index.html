@@ -1,4 +1,14 @@
 {% extends "main/main_base.html" %}
 {% block content %}
 MAIN PAGE
+
+<form method="post">
+{% csrf_token %}
+<div class="form-group"> 
+  <div> Hospital Name:<input type="text" name="hospital_name" value=""> </div>
+  <div> N5 Weekly Volume:<input type="text" name="n95_weekly_volume" value=""> </div>
+            
+</div>
+<button class="btn btn-success" type="submit">Submit</button>
+</form>
 {% endblock content %}
