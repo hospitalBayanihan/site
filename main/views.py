@@ -26,23 +26,32 @@ def main(request):
 # Create your views here.
 
 def refresh(request):
+    # View to update sqlite db with airtable data
+
     atable = Airtable('appLsmHfyJGeiXffC', 'Hospitals', api_key='keynI59Mcs9ZgXcXm')
-    
+
+    # Fields to skip
     skip = (
         'hospital_id_of_submitting_person',
     )
     
+    # hospitals contains a list of each row in from airtable
     hospitals = atable.get_all(view='Raw Hospital Data')
     
     for hosp in hospitals:
         hospitals_inputs = Hospitals()   
         hospitals_inputs.id = hosp['id']
         for f in hosp['fields']:
+            # hosp['fields'] is a dictionary where keys are fields of airtable and values have the corresponding value
             t = f.replace(' ', '_').replace('%', '').lower()
+            
             if t in skip:
                 continue
+                
+            # setattr() modifies object variables identified by t
             setattr(hospitals_inputs, t, hosp['fields'][f])
-        print(hospitals_inputs)
+            
+        # Save each hosp data stored in hospitals_inputs to db
         hospitals_inputs.save()
 
     return render(request, 'main/index.html', {'title': 'Insert Tagline Here'})

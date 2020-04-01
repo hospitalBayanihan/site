@@ -26,6 +26,7 @@ Adding columns to db:
    main/views.py
 
 Herlan Branch notes:
-1. models.py in main was edited to include all columns from airtable
-2. refresch view was added to update database based from airtable data
+1. models.py in main was edited to include all columns from airtable.
+2. refresh view was added to update database based from airtable data.
+3. I may have screwed up the migrations for main due to having many tries.
 
