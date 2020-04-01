@@ -28,7 +28,7 @@ def main(request):
 def refresh(request):
     # View to update sqlite db with airtable data
 
-    atable = Airtable('appLsmHfyJGeiXffC', 'Hospitals', api_key='keynI59Mcs9ZgXcXm')
+    atable = Airtable('appLsmHfyJGeiXffC', 'Hospitals', api_key='keys8DEQxXELZX13q')
 
     # Fields to skip
     skip = (

@@ -6,7 +6,7 @@ from airtable import Airtable
 
 def getFields():
     # Function to get fields from airtable
-    atable = Airtable('appLsmHfyJGeiXffC', 'Hospitals', api_key='keynI59Mcs9ZgXcXm')
+    atable = Airtable('appLsmHfyJGeiXffC', 'Hospitals', api_key='keys8DEQxXELZX13q')
     
     # Template entry exists where all columns are filled
     # Unfilled airtable fields do not show as a field
