@@ -130,4 +130,9 @@ def refresh(request):
         fulfillments_inputs.save()
     #-- End Update Fulfillments Table --#
     
-    return render(request, 'main/index.html', {'title': 'Insert Tagline Here'})
+    content = {
+        'title': 'Insert Tagline Here',
+        'hosp_all' : Hospitals.objects.all()
+    }
+    
+    return render(request, 'main/index.html', content)
