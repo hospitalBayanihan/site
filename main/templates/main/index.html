@@ -1,0 +1,24 @@
+{% extends "main/main_base.html" %}
+{% block content %}
+  MAIN PAGE
+  
+  <form method="post">
+  {% csrf_token %}
+  <div class="form-group"> 
+    <div> Hospital Name:<input type="text" name="hospital_name" value=""> </div>
+    <div> N95 Weekly Volume:<input type="text" name="n95_weekly_volume" value=""> </div>
+              
+  </div>
+  <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+  
+  
+  <hr>
+  <br>
+  <div>Inside the DB:</div> 
+  <br>
+  {% for hosp in hosp_all%}
+  <div>Name: {{hosp.hospital_name}}</div> 
+  <div>N95: {{hosp.n95_weekly_volume}}</div> 
+  {% endfor %}
+{% endblock content %}
