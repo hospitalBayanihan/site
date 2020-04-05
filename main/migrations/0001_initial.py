@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('booties/shoe_cover_weekly_volume', models.IntegerField(blank=True, null=True)),
                 ('goggles_weekly_volume', models.IntegerField(blank=True, null=True)),
                 ('hair_caps_weekly_volume', models.IntegerField(blank=True, null=True)),
-                ('alcohol_70%_weekly_volume', models.IntegerField(blank=True, null=True)),
+                ('alcohol_70_weekly_volume', models.IntegerField(blank=True, null=True)),
                 ('disinfectants_weekly_volume', models.IntegerField(blank=True, null=True)),
                 ('aerosol_(acrylic)_box_weekly_volume', models.IntegerField(blank=True, null=True)),
                 ('personnel_count_for_food', models.IntegerField(blank=True, null=True)),
