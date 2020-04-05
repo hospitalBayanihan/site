@@ -21,3 +21,16 @@ if [ "$( psql -tAc "SELECT 1 FROM pg_database WHERE datname='unverified'" )" != 
 else
     echo "Database already exists."
 fi 
+
+# echo "Creating user..."
+# if [ "$(psql -c "CREATE USER bayanihan_dev WITH PASSWORD 'dev_bayanihan';")" == "CREATE ROLE" ]; then
+#     echo "User created."
+# else
+#     echo "User already exists."
+# fi
+
+# if [ "$(psql -c "GRANT ALL PRIVILEGES ON DATABASE unverified TO bayanihan_dev;")" == "GRANT" ]; then
+#     echo "Permissions granted to user."
+# else
+#     echo "Failed to grant permissions."
+# fi
