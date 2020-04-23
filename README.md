@@ -25,6 +25,11 @@ Adding columns to db:
    serve as the form. Make sure the names matches the declarations in
    main/views.py
 
-Notes:
-1. Please set environment variable AIRTABLE_API_KEY with your airtable API key. 
-2. Run http://localhost:8000/refredh/ to update sqlite database with airtable data.
+Setting up dotenv file to use Airtable:
+1. Make sure you have creator access to our Airtable (http://tiny.cc/HBAirtableDEV)
+2. Go to your Airtable account (https://airtable.com/account) and get your API Key.
+3. Create or add to your existing .env file containing the following line:
+      AIRTABLE_API_KEY="<api_key>"
+   Where api_key is your API Key from step 2.
+  
+Note: Run http://localhost:8000/refresh/ to update sqlite database with airtable data.
